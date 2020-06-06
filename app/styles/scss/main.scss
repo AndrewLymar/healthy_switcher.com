@@ -1,0 +1,380 @@
+@import "vars";
+@import "fonts";
+@import "flex";
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    font-family: $default-font;
+}
+
+.container {
+    width: 100%;
+    max-width: $max-container-width;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px;
+    border: 1px solid transparent;
+    background: #ff3;
+    font-size: 18px;
+    color: #0F1113;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+.header {
+    background: url(../../img/header-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu {
+    height: 90px;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #fff;
+
+        @media only screen and (max-width: $md) {
+            color: #fff;
+        }
+    }
+
+    @media only screen and (max-width: $md) {
+        position: fixed;
+        width: 100%;
+        padding: 20px 25px;
+        background: #000;
+        color: #fff;
+        z-index: 100;
+    }
+
+    &__list {
+        display: flex;
+        align-self: center;
+
+        @media only screen and (max-width: $md) {
+            display: none;
+            position: absolute;
+            top: 88px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            background: #000;
+        }
+    }
+
+    &__item {
+        margin-right: 35px;
+        border-radius: 15px;
+        transition: 1s all;
+        cursor: pointer;
+
+        @media only screen and (max-width: $lg) {
+            padding: 4px 10px;
+        }
+
+        @media only screen and (max-width: $md) {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active,
+        &:hover {
+
+            .menu__link {
+                color: #34C759;
+            }
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        text-decoration: none;
+        transition: 1s all;
+        color: #000;
+
+        @media only screen and (max-width: $md) {
+            font-size: 20px;
+        }
+    }
+
+    &__icon {
+        display: none;
+
+        @media only screen and (max-width: $md) {
+            display: flex;
+        }
+    }
+
+    &.active {
+        border-radius: 15px;
+        background-color: #ffc61a;
+
+        .menu__link {
+            color: #000;
+        }
+    }
+}
+
+.menu-icon {
+    display: none;
+
+    @media only screen and (max-width: $md) {
+        display: flex;
+    }
+}
+
+.sticky-menu {
+    position: fixed;
+    width: 100%;
+    background: #000;
+    z-index: 100;
+}
+
+.logo {
+    &__img {
+        margin-right: 9px;
+    }
+
+    &__text {
+        color: #34C759;
+    }
+}
+
+.banner {
+    max-width: 850px;
+    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 160px;
+
+    &__title {
+        margin: 0;
+        font-size: 72px;
+        font-weight: 300;
+        line-height: 87px;
+        letter-spacing: 4px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #fff;
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__description {
+        width: 75%;
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        letter-spacing: -0.2px;
+        text-align: center;
+        color: #D1CECA;
+    }
+
+    &__button {
+        min-width: 220px;
+        min-height: 72px;
+        margin-top: 40px;
+        border-radius: 43px;
+        background-color: #34C759;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 0.2em;
+    }
+
+    &__blocks {
+        margin-top: 70px;
+    }
+
+}
+
+.banner-block {
+    &__top-text {
+        margin-top: 16px;
+        font-size: 16px;
+        color: #fff;
+    }
+
+    &__sub-text {
+        margin-top: 12px;
+        font-size: 14px;
+        color: #8F8E8F;
+    }
+}
+
+.section {
+    &__title-container {
+        position: relative;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: 0.2em;
+        color: #D9D9D9;
+        z-index: 10;
+    }
+
+    &__background-title {
+        position: absolute;
+        top: -48%;
+        text-align: center;
+        font-size: 100px;
+        line-height: 150px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #303030;
+        z-index: 1;
+    }
+}
+
+.divider {
+    margin-top: 28px;
+    border-bottom: 2px solid #34C759;
+}
+
+.divider--long {
+    width: 60px;
+}
+
+.divider--short {
+    width: 56px;
+}
+
+
+.s-about {
+    background: #191919;
+}
+
+.about-content {
+    position: relative;
+    padding-top: 105px;
+    padding-bottom: 90px;
+    background: #252525;
+
+    &__title {
+        z-index: 10;
+    }
+
+    &__description {
+        margin-top: 60px;
+        line-height: 30px;
+        color: #D9D9D9;
+    }
+}
+
+.steps {
+    padding-top: 90px;
+    padding-bottom: 30px;
+    background: #191919;
+}
+
+.steps-content {
+    position: relative;
+}
+
+.works {
+    margin-top: 60px;
+}
+
+.work {
+    flex-basis: 255px;
+    padding: 25px;
+    padding-bottom: 60px;
+    background: #252525;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 1.0s all;
+    
+    &:hover {
+       background: #34C759; 
+    }
+
+    &__title {
+        font-size: 22px;
+        line-height: 22px;
+        letter-spacing: -0.275px;
+        text-transform: capitalize;
+        color: #fff;
+    }
+    
+    &__title--active {
+        color: #191919;
+    }
+    
+    &:hover {
+        .work__title {
+             color: #191919;
+        }
+    }
+    
+    &__divider--active {
+        border-color: #191919;
+        
+    }
+    
+    &:hover {
+        .work__divider {
+             border-color: #191919;
+        }
+    }
+
+    &__text {
+        margin-top: 24px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: -0.1625px;
+        color: #929292;
+    }
+    
+    &__text--active {
+        color: #191919;
+    }
+    
+     &:hover {
+        .work__text {
+             color: #191919;
+        }
+    }
+
+}
+
+.work--active {
+    background: #34C759;
+}
+
+
+@import "media";
