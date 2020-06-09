@@ -43,7 +43,7 @@ gulp.task('js', function () {
         'app/js/common.js'
 		])
 		.pipe(concat('scripts.min.js'))
-		.pipe(uglify())
+		//.pipe(uglify())
 		.pipe(gulp.dest('app'))
 });
 
@@ -58,19 +58,19 @@ gulp.task('svg', function () {
 	return gulp.src('app/img/*.svg')
 		.pipe(svgmin({
 			js2svg: {
-				//pretty: true
+				pretty: true
 			}
 		}))
 		.pipe(cheerio({
 			run: function ($) {
-                /*
+                
 				$('[fill]').removeAttr('fill');
 				$('[stroke]').removeAttr('stroke');
 				$('[style]').removeAttr('style');
-                */
+                
 			},
 			parserOptions: {
-				//xmlMode: true
+				xmlMode: true
 			}
 		}))
 		.pipe(replace('&gt;', '>'))
