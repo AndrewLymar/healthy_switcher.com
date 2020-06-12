@@ -761,10 +761,6 @@
   .ta-right-md {
     text-align: right;
   }
-
-  .menu a {
-    color: #fff;
-  }
 }
 
 @media only screen and (max-width:480px) {
@@ -1177,6 +1173,16 @@ body {
   height: 100vh;
 }
 
+@media only screen and (max-width:768px) {
+  .header {
+    height: auto;
+  }
+
+  .menu a {
+    color: #fff;
+  }
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1339,6 +1345,29 @@ nav {
   color: #fff;
 }
 
+@media only screen and (max-width:768px) {
+  .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .banner {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .banner__title {
+    font-size: 54px;
+    line-height: 65px;
+  }
+
+  .section__background-title {
+    display: none;
+  }
+}
+
 .banner__title span {
   font-weight: 400;
 }
@@ -1387,6 +1416,7 @@ nav {
 }
 
 .section__title {
+  text-align: center;
   font-size: 36px;
   font-weight: 400;
   line-height: 60px;
@@ -1408,7 +1438,7 @@ nav {
 }
 
 .divider {
-  margin-top: 28px;
+  margin-top: 40px;
   border-bottom: 2px solid #34c759;
 }
 
@@ -1469,6 +1499,16 @@ nav {
   transition: 1s;
 }
 
+@media only screen and (max-width:768px) {
+  .work {
+    margin-top: 25px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
 .work:hover {
   background: #34c759;
 }
@@ -1527,18 +1567,6 @@ nav {
   -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.1);
   box-shadow: 0 2px 5px rgba(0,0,0,.1);
   overflow: hidden;
-}
-
-@media only screen and (max-width:768px) {
-  .menu-icon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .card {
-    width: 90%;
-  }
 }
 
 .card__thumb img {
@@ -1650,6 +1678,12 @@ nav {
   margin-top: 38px;
 }
 
+@media only screen and (max-width:992px) {
+  .chef {
+    margin-top: 50px;
+  }
+}
+
 .chef__avatar {
   width: 65px;
   height: 65px;
@@ -1687,8 +1721,136 @@ nav {
   justify-content: space-between;
 }
 
+@media only screen and (max-width:992px) {
+  .chef__portfolio {
+    margin-top: 50px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
 .chef-portfolio__img {
   height: auto;
+}
+
+.recipes {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 150px 150px 150px;
+  grid-gap: 30px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.current-recipe {
+  position: relative;
+  padding: 60px 30px 30px;
+  grid-row: 1/4;
+  background: url("../../img/breakfast.jpg") 0 0/cover no-repeat;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.current-recipe__back {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  border-radius: 100%;
+  background: rgba(50,50,50,.4);
+  cursor: pointer;
+}
+
+.current-recipe__date {
+  margin-top: 70px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.current-recipe__title {
+  margin-top: 30px;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.current-recipe__author {
+  margin-top: 50px;
+}
+
+.current-recipe__socials {
+  margin-top: 65px;
+}
+
+.recipe-type {
+  min-width: 50px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background: rgba(0,0,0,.7);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.recipe {
+  padding: 20px;
+  color: #fff;
+  background: #252525;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.recipe__bottom {
+  margin-top: 15px;
+}
+
+.recipe__text {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.recipe__date {
+  margin-left: 15px;
+  font-size: 12px;
+  line-height: 25px;
+  color: #b3b3b3;
+}
+
+.recipe__date--active {
+  color: #252525;
+}
+
+.recipe--active,
+.recipe:hover {
+  background: #34c759;
+  color: #252525;
+}
+
+.recipe--active .recipe__date,
+.recipe:hover .recipe__date {
+  color: #252525;
+}
+
+.recipe-social {
+  margin-right: 25px;
+}
+
+.recipe-social:last-child {
+  margin-right: 0;
+}
+
+.recipe-social__soc-icon {
+  margin-right: 12px;
 }
 * {
   -webkit-box-sizing: border-box;

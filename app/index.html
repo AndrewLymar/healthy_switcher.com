@@ -47,7 +47,7 @@
                 </h1>
                 <div class="banner__description">HEALTHY SWITCHER chefs do all the prep work, like peeling, chopping & marinating, so you can cook a fresh homemade dinner in just 15 minutes.</div>
                 <button class="button banner__button">Order Now</button>
-                <div class="banner__blocks flex-row col-12 jc-around">
+                <div class="banner__blocks flex-row flex-col-sm col-12 jc-around gap">
                     <div class="banner__block banner-block flex-col ai-center">
                         <svg width="20" height="20" fill="#909090">
                             <use xlink:href="img/sprite.svg#watch-later"></use>
@@ -344,52 +344,174 @@
                     Chefs
                 </div>
                 <div class="divider divider--long"></div>
-                <div class="chefs col-12 flex-row jc-between gap">
-                    <div class="chef col-4">
-                        <div class="chef__avatar-container flex-row ai-center">
-                            <div class="chef__avatar">
-                                <img src="img/chef1.jpg" alt="chef">
-                            </div>
-                            <div class="chef__text">
-                                <div class="chef__name">Gregory Flores</div>
-                                <div class="chef__position">Chef of the cold</div>
-                            </div>
+            </div>
+            <div class="chefs col-12 flex-row flex-col-lg jc-between gap no-gap-sm">
+                <div class="chef col-4 col-12-lg jc-center-lg">
+                    <div class="chef__avatar-container flex-row ai-center jc-center-lg">
+                        <div class="chef__avatar">
+                            <img src="img/chef1.jpg" alt="chef">
                         </div>
-                        <div class="chef__portfolio chef-portfolio">
-                            <img src="img/dish1-big.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish2.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish3.jpg" class="chef-portfolio__img" alt="dish">
+                        <div class="chef__text">
+                            <div class="chef__name">Gregory Flores</div>
+                            <div class="chef__position">Chef of the cold</div>
                         </div>
                     </div>
-                    <div class="chef col-4">
-                        <div class="chef__avatar-container flex-row ai-center">
-                            <div class="chef__avatar">
-                                <img src="img/chef2.jpg" alt="chef">
+                    <div class="chef__portfolio chef-portfolio">
+                        <img src="img/dish1-big.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish2.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish3.jpg" class="chef-portfolio__img" alt="dish">
+                    </div>
+                </div>
+                <div class="chef col-4 col-12-lg">
+                    <div class="chef__avatar-container flex-row ai-center jc-center-lg">
+                        <div class="chef__avatar">
+                            <img src="img/chef2.jpg" alt="chef">
+                        </div>
+                        <div class="chef__text">
+                            <div class="chef__name">Annette Cooper</div>
+                            <div class="chef__position">Chef of the hot</div>
+                        </div>
+                    </div>
+                    <div class="chef__portfolio chef-portfolio flex-row jc-beetwen">
+                        <img src="img/dish4-big.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish5.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish6.jpg" class="chef-portfolio__img" alt="dish">
+                    </div>
+                </div>
+                <div class="chef col-4 col-12-lg">
+                    <div class="chef__avatar-container flex-row ai-center jc-center-lg">
+                        <div class="chef__avatar">
+                            <img src="img/chef3.jpg" alt="chef">
+                        </div>
+                        <div class="chef__text">
+                            <div class="chef__name">Greg Fox</div>
+                            <div class="chef__position">Сhef macro kitchen</div>
+                        </div>
+                    </div>
+                    <div class="chef__portfolio chef-portfolio flex-row jc-beetwen">
+                        <img src="img/dish7-big.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish8.jpg" class="chef-portfolio__img" alt="dish">
+                        <img src="img/dish9.jpg" class="chef-portfolio__img" alt="dish">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section s-chefs">
+        <div class="container">
+            <div class="section__title-container flex-col ai-center">
+                <h2 class="section__title">Recipes From Our Chefs</h2>
+                <div class="section__background-title">
+                    Recipes
+                </div>
+                <div class="divider divider--long"></div>
+            </div>
+            <div class="recipes">
+                <div class="current-recipe flex-col ai-center">
+                    <div class="recipe-type">
+                        Breakfast
+                    </div>
+                    <div class="current-recipe__back flex-row centered">
+                        <svg width="15" height="15" fill="#fff">
+                            <use xlink:href="img/sprite.svg#share"></use>
+                        </svg>
+                    </div>
+                    <div class="current-recipe__date">05 Jul 2016</div>
+                    <h3 class="current-recipe__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                    <div class="current-recipe__author">Jason Keller</div>
+                    <div class="recipe-socials current-recipe__socials flex-row">
+                        <div class="recipe-social flex-row ai-center">
+                            <svg width="15" height="15" fill="#fff" class="recipe-social__soc-icon">
+                                <use xlink:href="img/sprite.svg#eye"></use>
+                                <div class="recipe-social__soc-text">275</div>
+                            </svg>
+                        </div>
+                        <div class="recipe-social flex-row ai-center">
+                            <svg width="15" height="15" fill="#fff" class="recipe-social__soc-icon">
+                                <use xlink:href="img/sprite.svg#comments"></use>
+                                <div class="recipe-social__soc-text">275</div>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="recipe">
+                    <div class="recipe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</div>
+                    <div class="recipe__bottom flex-row ai-center jc-between">
+                        <div class="flex-row">
+                            <div class="recipe-type">
+                                Lunch
                             </div>
-                            <div class="chef__text">
-                                <div class="chef__name">Annette Cooper</div>
-                                <div class="chef__position">Chef of the hot</div>
+                            <div class="recipe__date flex-row ai-center">
+                                07 Jan 2016
                             </div>
                         </div>
-                        <div class="chef__portfolio chef-portfolio flex-row jc-beetwen">
-                            <img src="img/dish1-big.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish2.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish3.jpg" class="chef-portfolio__img" alt="dish">
-                        </div>
-                    </div><div class="chef col-4">
-                        <div class="chef__avatar-container flex-row ai-center">
-                            <div class="chef__avatar">
-                                <img src="img/chef1.jpg" alt="chef">
+                        <div class="recipe-socials flex-row">
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#eye"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
                             </div>
-                            <div class="chef__text">
-                                <div class="chef__name">Greg Fox</div>
-                                <div class="chef__position">Сhef macro kitchen</div>
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#comments"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
                             </div>
                         </div>
-                        <div class="chef__portfolio chef-portfolio flex-row jc-beetwen">
-                            <img src="img/dish1-big.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish2.jpg" class="chef-portfolio__img" alt="dish">
-                            <img src="img/dish3.jpg" class="chef-portfolio__img" alt="dish">
+                    </div>
+                </div>
+                <div class="recipe">
+                    <div class="recipe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</div>
+                    <div class="recipe__bottom flex-row ai-center jc-between">
+                        <div class="flex-row">
+                            <div class="recipe-type">
+                                Dinner
+                            </div>
+                            <div class="recipe__date flex-row ai-center">
+                                07 Jan 2016
+                            </div>
+                        </div>
+                        <div class="recipe-socials flex-row">
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#eye"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
+                            </div>
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#comments"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recipe recipe--active">
+                    <div class="recipe__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</div>
+                    <div class="recipe__bottom flex-row ai-center jc-between">
+                        <div class="flex-row">
+                            <div class="recipe-type">
+                                Sweets
+                            </div>
+                            <div class="recipe__date recipe__date--active flex-row ai-center">
+                                07 Jan 2016
+                            </div>
+                        </div>
+                        <div class="recipe-socials flex-row">
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#eye"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
+                            </div>
+                            <div class="recipe-social flex-row ai-center">
+                                <svg width="15" height="15" fill="currentColor" class="recipe-social__soc-icon">
+                                    <use xlink:href="img/sprite.svg#comments"></use>
+                                    <div class="recipe-social__soc-text">275</div>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>

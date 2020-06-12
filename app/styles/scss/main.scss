@@ -33,6 +33,10 @@ body {
     background: url(../../img/header-bg.jpg) no-repeat;
     background-size: cover;
     height: 100vh;
+
+    @media only screen and (max-width: $md) {
+        height: auto;
+    }
 }
 
 nav {
@@ -174,7 +178,19 @@ nav {
     padding-top: 80px;
     padding-bottom: 160px;
 
+    @media only screen and (max-width: $md) {
+        height: auto;
+        padding-top: 120px;
+        padding-bottom: 80px;
+    }
+
     &__title {
+
+        @media only screen and (max-width: $md) {
+            font-size: 54px;
+            line-height: 65px;
+        }
+
         margin: 0;
         font-size: 72px;
         font-weight: 300;
@@ -238,12 +254,17 @@ nav {
     }
 
     &__title {
+        text-align: center;
         font-size: 36px;
         font-weight: 400;
         line-height: 60px;
         letter-spacing: 0.2em;
         color: #D9D9D9;
         z-index: 10;
+
+        @media only screen and (max-width: $md) {
+            //font-size: 28px;
+        }
     }
 
     &__background-title {
@@ -256,11 +277,15 @@ nav {
         text-transform: uppercase;
         color: #303030;
         z-index: 1;
+
+        @media only screen and (max-width: $md) {
+            display: none;
+        }
     }
 }
 
 .divider {
-    margin-top: 28px;
+    margin-top: 40px;
     border-bottom: 2px solid #34C759;
 }
 
@@ -309,6 +334,10 @@ nav {
 }
 
 .work {
+    @media only screen and (max-width: $md) {
+        margin-top: 25px;
+    }
+
     flex-basis: 255px;
     padding: 25px;
     padding-bottom: 60px;
@@ -535,21 +564,26 @@ nav {
 
 .chefs {
     margin-top: 38px;
+
 }
 
 .chef {
+
+    @media only screen and (max-width: $lg) {
+        margin-top: 50px;
+    }
+
     &__avatar {
         width: 65px;
         height: 65px;
         margin-right: 25px;
+
         img {
             border-radius: 100%;
         }
     }
-    
-    &__text {
-        
-    }
+
+    &__text {}
 
     &__name {
         font-size: 18px;
@@ -566,20 +600,141 @@ nav {
         letter-spacing: -0.15px;
         color: #8C8C8C;
     }
-    
+
     &__portfolio {
         margin-top: 24px;
         display: grid;
         grid-template-columns: 160px 65px 65px;
         grid-auto-columns: 2fr 1fr 1fr;
         grid-template-rows: auto;
-        justify-content:space-between;
+        justify-content: space-between;
+
+        @media only screen and (max-width: $lg) {
+            margin-top: 50px;
+            justify-content: center;
+        }
     }
 }
 
 .chef-portfolio {
     &__img {
         height: auto;
+    }
+}
+
+.recipes {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px 150px 150px;
+    grid-gap: 30px;
+    justify-content: center;
+}
+
+.current-recipe {
+    position: relative;
+    padding: 30px;
+    padding-top: 60px;
+    grid-row: 1/4;
+    background: url("../../img/breakfast.jpg") no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+
+    &__back {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 20px;
+        right: 20px;
+        border-radius: 100%;
+        background: rgba(50, 50, 50, 0.4);
+        cursor: pointer;
+    }
+
+    &__date {
+        margin-top: 70px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+
+    &__title {
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    &__author {
+        margin-top: 50px;
+    }
+
+    &__socials {
+        margin-top: 65px;
+    }
+}
+
+.recipe-type {
+    min-width: 50px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.recipe {
+    padding: 20px;
+    color: #fff;
+    background: #252525;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    
+    &__bottom {
+        margin-top: 15px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    &__date {
+        margin-left: 15px;
+        font-size: 12px;
+        line-height: 25px;
+        color: #B3B3B3;
+    }
+
+    &__date--active {
+        color: #252525;
+    }
+}
+
+.recipe--active,
+.recipe:hover {
+    background: #34C759;
+    color: #252525;
+
+    .recipe__date {
+        color: #252525;
+    }
+}
+
+.recipe-social {
+    margin-right: 25px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &__soc-icon {
+        margin-right: 12px;
     }
 }
 
