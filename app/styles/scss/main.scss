@@ -228,13 +228,19 @@ nav {
         letter-spacing: 0.2em;
     }
 
-    &__blocks {
+    &__contacts {
         margin-top: 70px;
     }
 
 }
 
-.banner-block {
+.contact-block {
+    width: 245px;
+
+    @media only screen and (max-width: $sm) {
+        margin-bottom: 30px;
+    }
+
     &__top-text {
         margin-top: 16px;
         font-size: 16px;
@@ -334,8 +340,10 @@ nav {
 }
 
 .work {
-    @media only screen and (max-width: $md) {
+    @media only screen and (max-width: $xl) {
         margin-top: 25px;
+        margin-left: 15px;
+        margin-right: 15px;
     }
 
     flex-basis: 255px;
@@ -629,6 +637,11 @@ nav {
     grid-template-rows: 150px 150px 150px;
     grid-gap: 30px;
     justify-content: center;
+
+    @media only screen and (max-width: $lg) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
 
 .current-recipe {
@@ -677,7 +690,7 @@ nav {
 .recipe-type {
     min-width: 50px;
     padding: 5px 15px;
-    border-radius: 10px;
+    border-radius: 9px;
     background: rgba(0, 0, 0, 0.7);
     font-size: 10px;
     font-weight: 700;
@@ -694,7 +707,7 @@ nav {
     background: #252525;
     transition: all 0.5s ease;
     cursor: pointer;
-    
+
     &__bottom {
         margin-top: 15px;
     }
@@ -726,6 +739,12 @@ nav {
     }
 }
 
+.recipe-socials {
+    @media only screen and (max-width: $sm) {
+        margin-top: 25px;
+    }
+}
+
 .recipe-social {
     margin-right: 25px;
 
@@ -735,6 +754,118 @@ nav {
 
     &__soc-icon {
         margin-right: 12px;
+    }
+}
+
+.s-social {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #191919;
+}
+
+.socials-blocks {
+    margin-top: 60px;
+}
+
+.social-block {
+    flex-basis: 350px;
+    background: #252525;
+    border-radius: 10px;
+
+    @media only screen and (max-width: $md) {
+        margin-top: 25px;
+    }
+
+    &__top {
+        padding: 25px;
+        border-bottom: 2px solid #303030;
+    }
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        border: 2px solid #303030;
+        border-radius: 100%;
+    }
+
+    &__name {
+        font-size: 14px;
+        line-height: 30px;
+        color: #BFBFBF;
+    }
+
+    &__follow-container {
+        padding: 10px 15px;
+        border: 2px solid #303030;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    &__follow {
+        text-align: center;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: #737373;
+        text-transform: uppercase;
+    }
+
+    &__bottom {
+        padding: 20px 25px;
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: 30px;
+        color: #737373;
+    }
+
+    &__text {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 30px;
+        color: #BDBDBD;
+    }
+
+    &__author {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 30px;
+        color: #34C759;
+        cursor: pointer;
+    }
+
+    &__inst-photo {
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.footer {
+    background: #252525;
+
+    &__top {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #303030;
+    }
+
+    &__bottom {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__copy {
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 60px;
+        color: #737373;
     }
 }
 
