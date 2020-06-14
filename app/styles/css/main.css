@@ -569,18 +569,10 @@ nav {
   position: relative;
   padding-top: 10px;
   padding-bottom: 10px; }
-  .menu a {
-    font-size: 14px;
-    text-decoration: none;
-    color: #fff; }
-    @media only screen and (max-width: 768px) {
-      .menu a {
-        color: #fff; } }
   @media only screen and (max-width: 768px) {
     .menu {
       position: fixed;
       width: 100%;
-      padding: 20px 25px;
       background: #000;
       color: #fff;
       z-index: 100; } }
@@ -610,20 +602,21 @@ nav {
         padding: 4px 10px; } }
     @media only screen and (max-width: 768px) {
       .menu__item {
-        margin-top: 15px;
-        margin-bottom: 15px; } }
+        margin-top: 25px;
+        margin-right: 0;
+        margin-bottom: 25px; } }
     .menu__item:last-child {
       margin-right: 0; }
-    .menu__item.active .menu__link, .menu__item:hover .menu__link {
-      color: #34C759; }
-  .menu__link {
+  .menu a {
     font-size: 14px;
     text-decoration: none;
     transition: 1s all;
-    color: #000; }
+    color: #fff; }
     @media only screen and (max-width: 768px) {
-      .menu__link {
-        font-size: 20px; } }
+      .menu a {
+        font-size: 22px; } }
+    .menu a.active {
+      color: #34C759; }
   .menu__icon {
     display: none; }
     @media only screen and (max-width: 768px) {
@@ -704,7 +697,9 @@ nav {
   width: 245px; }
   @media only screen and (max-width: 480px) {
     .contact-block {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+      .contact-block:last-child {
+        margin-bottom: 0; } }
   .contact-block__top-text {
     margin-top: 16px;
     font-size: 16px;
@@ -756,14 +751,30 @@ nav {
 .about-content {
   position: relative;
   padding-top: 105px;
+  padding-right: 185px;
   padding-bottom: 90px;
+  padding-left: 185px;
   background: #252525; }
+  @media only screen and (max-width: 768px) {
+    .about-content {
+      width: 100%;
+      padding: 15%;
+      background: #191919; } }
   .about-content__title {
     z-index: 10; }
   .about-content__description {
     margin-top: 60px;
     line-height: 30px;
     color: #D9D9D9; }
+
+.slider {
+  margin-top: 90px; }
+
+.slick-prev {
+  left: -50px; }
+
+.slick-next {
+  right: -50px; }
 
 .s-steps {
   padding-top: 90px;
@@ -958,6 +969,11 @@ nav {
 .chef-portfolio__img {
   height: auto; }
 
+.s-recipes {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: #191919; }
+
 .recipes {
   margin-top: 60px;
   display: grid;
@@ -1019,6 +1035,7 @@ nav {
   padding: 20px;
   color: #fff;
   background: #252525;
+  border-radius: 10px;
   transition: all 0.5s ease;
   cursor: pointer; }
   .recipe__bottom {
@@ -1065,27 +1082,42 @@ nav {
   flex-basis: 350px;
   background: #252525;
   border-radius: 10px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1200px) {
     .social-block {
-      margin-top: 25px; } }
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 25px; } }
   .social-block__top {
     padding: 25px;
     border-bottom: 2px solid #303030; }
+    @media only screen and (max-width: 480px) {
+      .social-block__top {
+        padding-left: 10px;
+        padding-right: 10px; } }
   .social-block__icon {
     width: 40px;
     height: 40px;
     margin-right: 20px;
     border: 2px solid #303030;
     border-radius: 100%; }
+    @media only screen and (max-width: 480px) {
+      .social-block__icon {
+        margin-right: 10px; } }
   .social-block__name {
     font-size: 14px;
     line-height: 30px;
     color: #BFBFBF; }
+    @media only screen and (max-width: 320px) {
+      .social-block__name {
+        font-size: 12px; } }
   .social-block__follow-container {
     padding: 10px 15px;
     border: 2px solid #303030;
     border-radius: 50px;
     cursor: pointer; }
+    @media only screen and (max-width: 320px) {
+      .social-block__follow-container {
+        padding: 5px 10px; } }
   .social-block__follow {
     text-align: center;
     font-size: 10px;
@@ -1093,6 +1125,9 @@ nav {
     letter-spacing: 0.2em;
     color: #737373;
     text-transform: uppercase; }
+    @media only screen and (max-width: 320px) {
+      .social-block__follow {
+        font-size: 8px; } }
   .social-block__bottom {
     padding: 20px 25px; }
   .social-block__date {

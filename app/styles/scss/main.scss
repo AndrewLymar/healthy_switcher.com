@@ -52,20 +52,10 @@ nav {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    a {
-        font-size: 14px;
-        text-decoration: none;
-        color: #fff;
-
-        @media only screen and (max-width: $md) {
-            color: #fff;
-        }
-    }
-
     @media only screen and (max-width: $md) {
         position: fixed;
         width: 100%;
-        padding: 20px 25px;
+        //padding: 20px 25px;
         background: #000;
         color: #fff;
         z-index: 100;
@@ -101,31 +91,28 @@ nav {
         }
 
         @media only screen and (max-width: $md) {
-            margin-top: 15px;
-            margin-bottom: 15px;
+            margin-top: 25px;
+            margin-right: 0;
+            margin-bottom: 25px;
         }
 
         &:last-child {
             margin-right: 0;
         }
-
-        &.active,
-        &:hover {
-
-            .menu__link {
-                color: #34C759;
-            }
-        }
     }
 
-    &__link {
+    a {
         font-size: 14px;
         text-decoration: none;
         transition: 1s all;
-        color: #000;
-
+        color: #fff;
+        
         @media only screen and (max-width: $md) {
-            font-size: 20px;
+            font-size: 22px;
+        }
+        
+        &.active {
+            color: #34C759;
         }
     }
 
@@ -239,6 +226,9 @@ nav {
 
     @media only screen and (max-width: $sm) {
         margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__top-text {
@@ -311,9 +301,17 @@ nav {
 .about-content {
     position: relative;
     padding-top: 105px;
+    padding-right: 185px;
     padding-bottom: 90px;
+    padding-left: 185px;
     background: #252525;
-
+    
+     @media only screen and (max-width: $md) {
+        width: 100%;
+        padding: 15%;
+        background: #191919;
+    }
+    
     &__title {
         z-index: 10;
     }
@@ -323,6 +321,20 @@ nav {
         line-height: 30px;
         color: #D9D9D9;
     }
+}
+
+.slider {
+    margin-top: 90px;
+    img {
+    }
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
 }
 
 .s-steps {
@@ -630,6 +642,12 @@ nav {
     }
 }
 
+.s-recipes {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background: #191919;
+}
+
 .recipes {
     margin-top: 60px;
     display: grid;
@@ -705,6 +723,7 @@ nav {
     padding: 20px;
     color: #fff;
     background: #252525;
+    border-radius: 10px;
     transition: all 0.5s ease;
     cursor: pointer;
 
@@ -772,13 +791,19 @@ nav {
     background: #252525;
     border-radius: 10px;
 
-    @media only screen and (max-width: $md) {
-        margin-top: 25px;
+    @media only screen and (max-width: $xl) {
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 25px;
     }
 
     &__top {
         padding: 25px;
         border-bottom: 2px solid #303030;
+           @media only screen and (max-width: $sm) {
+               padding-left: 10px;
+               padding-right: 10px;
+        }
     }
 
     &__icon {
@@ -787,12 +812,20 @@ nav {
         margin-right: 20px;
         border: 2px solid #303030;
         border-radius: 100%;
+
+        @media only screen and (max-width: $sm) {
+           margin-right: 10px;
+        }
     }
 
     &__name {
         font-size: 14px;
         line-height: 30px;
         color: #BFBFBF;
+        
+         @media only screen and (max-width: $xs) {
+           font-size: 12px;
+        }
     }
 
     &__follow-container {
@@ -800,6 +833,10 @@ nav {
         border: 2px solid #303030;
         border-radius: 50px;
         cursor: pointer;
+        
+        @media only screen and (max-width: $xs) {
+           padding: 5px 10px;
+        }
     }
 
     &__follow {
@@ -809,6 +846,10 @@ nav {
         letter-spacing: 0.2em;
         color: #737373;
         text-transform: uppercase;
+        
+        @media only screen and (max-width: $xs) {
+           font-size: 8px;
+        }
     }
 
     &__bottom {

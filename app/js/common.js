@@ -1,6 +1,6 @@
  window.onload = function () {
-     $('nav').mobileMenu({
-         menuIconClassName: ".menu-icon",
+     $('.menu').mobileMenu({
+         menuIconClassName: ".menu__icon",
          mobileResolution: 900,
          menuType: "sticky",
          offsetToSticky: 80,
@@ -14,5 +14,20 @@
              starEl.parentNode.setAttribute('data-stars', starEl.dataset.rating);
          });
      })
+
+     $('.slider').slick({
+         lazyLoad: 'progressive',
+         slidesToShow: 3,
+         slidesToScroll: 1,
+         responsive: [
+			{
+				breakpoint: 800,
+				settings: {
+					slidesToShow: 1,
+				}
+    		}
+  		]
+     });
+
 
  };

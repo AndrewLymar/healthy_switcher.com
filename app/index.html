@@ -13,8 +13,8 @@
 <body>
     <div class="header">
         <nav class="menu header__menu">
-            <div class="container flex-row jc-between">
-                <a href="#home" class="logo menu__logo flex-row centered">
+            <div class="container flex-row jc-between ai-center-md">
+                <a href="" class="logo menu__logo flex-row centered">
                     <div class="logo__img flex-row centered">
                         <svg width="208" height="24" fill="#34C759">
                             <use xlink:href="img/sprite.svg#logo"></use>
@@ -22,20 +22,20 @@
                     </div>
                 </a>
                 <ul class="menu__list">
-                    <li class="menu__item active">
-                        <a class="menu__link active" href="#home">Menu</a>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#menu">Menu</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#about">Recipes</a>
+                        <a class="menu__link" href="#chefs">Chefs</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#tariffs">Chefs</a>
+                        <a class="menu__link" href="#recipes">Recipes</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="#tariffs">Contacts</a>
+                        <a class="menu__link" href="#contacts">Contacts</a>
                     </li>
                 </ul>
-                <svg width="48" height="48" fill="#ffc61a" class="menu__icon">
+                <svg width="42" height="42" fill="#34C759" class="menu__icon">
                     <use xlink:href="img/sprite.svg#menu"></use>
                 </svg>
             </div>
@@ -75,8 +75,8 @@
     </div>
     <section class="section s-about">
         <div class="container">
-            <div class="about-content flex-row jc-center">
-                <div class="col-9 flex-col ai-center">
+            <div class="about-content">
+                <div class="">
                     <div class="section__title-container
                        flex-col ai-center">
                         <h2 class="about-content__title section__title ta-center">The Basics Of Healthy Food</h2>
@@ -86,6 +86,14 @@
                         <div class="divider divider--long"></div>
                     </div>
                     <div class="about-content__description ta-center">In aliqua ea ullamco ad est ex non deserunt nulla. Consectetur sint ea aliquip aliquip consectetur voluptate est. Eu minim sint dolore laboris enim mollit voluptate irure esse aliquip.</div>
+                    <div class="slider">
+                           <img data-lazy="img/slide-image1.jpg" alt="slide">
+                           <img data-lazy="img/slide-image2.jpg" alt="slide">
+                           <img data-lazy="img/slide-image1.jpg" alt="slide">
+                           <img data-lazy="img/slide-image2.jpg" alt="slide">
+                           <img data-lazy="img/slide-image1.jpg" alt="slide">
+                           <img data-lazy="img/slide-image2.jpg" alt="slide">
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,7 +133,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-dishes">
+    <section class="section s-dishes" id="menu">
         <div class="container">
             <div class="section__title-container flex-col ai-center">
                 <h2 class="section__title">Dish Of The Day</h2>
@@ -336,7 +344,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-chefs">
+    <section class="section s-chefs" id="chefs">
         <div class="container">
             <div class="section__title-container flex-col ai-center">
                 <h2 class="section__title">This Month's Chefs</h2>
@@ -397,7 +405,7 @@
             </div>
         </div>
     </section>
-    <section class="section s-chefs">
+    <section class="section s-recipes" id="recipes">
         <div class="container">
             <div class="section__title-container flex-col ai-center">
                 <h2 class="section__title">Recipes From Our Chefs</h2>
@@ -527,7 +535,7 @@
                 </div>
                 <div class="divider divider--long"></div>
             </div>
-            <div class="socials-blocks flex-row jc-between jc-center-md">
+            <div class="socials-blocks flex-row jc-between jc-around-xl jc-center-md">
                 <div class="social-block">
                     <div class="social-block__top">
                         <div class="flex-row jc-between">
@@ -611,7 +619,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="footer__top">
             <div class="contact-blocks flex-row flex-col-sm jc-around ai-center-sm col-12">
                 <div class="contact-block banner-block flex-col ai-center">

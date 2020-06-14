@@ -10,7 +10,7 @@
 
 		var $menu = $(this);
 		var $menuList = $menu.find("ul");
-		var $menuLinks = $menu.find("a");
+		var $menuLinks = $menu.find("ul a");
 		var $menuIcon = $(options.menuIconClassName);
 		var $closeIcon = $(options.closeIconClassName);
 		var currentMenuHeight = $menu.outerHeight();
@@ -86,6 +86,7 @@
 				if (refElement.position().top <= scrollPos + offset && refElement.position().top + refElement.height() > scrollPos) {
 					$menuLinks.removeClass("active");
 					currLink.addClass("active");
+                    console.log(currLink);
 				}
 			});
 		}
