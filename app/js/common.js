@@ -19,6 +19,8 @@
          lazyLoad: 'progressive',
          slidesToShow: 3,
          slidesToScroll: 1,
+         prevArrow: '<div class="myslick-prev"><svg width="16" height="16" fill="#4D4D4D"><use xlink: href = "img/sprite.svg#arrow" ></use></svg></div>',
+		nextArrow: '<div class="myslick-next"><svg width="16" height="16" fill="#4D4D4D"><use xlink: href = "img/sprite.svg#arrow"></use></svg ></div> ',
          responsive: [
 			{
 				breakpoint: 800,

@@ -1639,7 +1639,7 @@ body {
 }
 
 .header {
-  background: url("../../img/header-bg.jpg") 0 0/cover no-repeat;
+  background: url("img/header-bg.jpg") 0 0/cover no-repeat;
   height: 100vh;
 }
 
@@ -1818,6 +1818,7 @@ nav {
   }
 
   .banner__title {
+    margin-top: 50px;
     font-size: 54px;
     line-height: 65px;
   }
@@ -1926,12 +1927,28 @@ nav {
 @media only screen and (max-width:768px) {
   .about-content {
     width: 100%;
-    padding: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
     background: #191919;
   }
 
   .card {
     width: 90%;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .contact-block {
+    margin-bottom: 30px;
+  }
+
+  .contact-block:last-child {
+    margin-bottom: 0;
+  }
+
+  .about-content {
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -1946,15 +1963,70 @@ nav {
 }
 
 .slider {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 90px;
 }
 
-.slick-prev {
+.myslick-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #303030;
+  border-radius: 100%;
+  position: relative;
   left: -50px;
+  cursor: pointer;
 }
 
-.slick-next {
+.myslick-next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #303030;
+  border-radius: 100%;
+  position: relative;
   right: -50px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width:480px) {
+  .myslick-prev {
+    left: -15px;
+  }
+
+  .myslick-next {
+    right: -15px;
+  }
+}
+
+.myslick-next svg {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .s-steps {
@@ -2246,7 +2318,7 @@ nav {
   position: relative;
   padding: 60px 30px 30px;
   grid-row: 1/4;
-  background: url("../../img/breakfast.jpg") 0 0/cover no-repeat;
+  background: url("img/breakfast.jpg") 0 0/cover no-repeat;
   border-radius: 10px;
   text-align: center;
   color: #fff;
@@ -2340,14 +2412,6 @@ nav {
 }
 
 @media only screen and (max-width:480px) {
-  .contact-block {
-    margin-bottom: 30px;
-  }
-
-  .contact-block:last-child {
-    margin-bottom: 0;
-  }
-
   .recipe-socials {
     margin-top: 25px;
   }

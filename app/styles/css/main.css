@@ -551,7 +551,7 @@ body {
   cursor: pointer; }
 
 .header {
-  background: url(../../img/header-bg.jpg) no-repeat;
+  background: url(img/header-bg.jpg) no-repeat;
   background-size: cover;
   height: 100vh; }
   @media only screen and (max-width: 768px) {
@@ -667,6 +667,7 @@ nav {
     color: #fff; }
     @media only screen and (max-width: 768px) {
       .banner__title {
+        margin-top: 50px;
         font-size: 54px;
         line-height: 65px; } }
     .banner__title span {
@@ -758,8 +759,13 @@ nav {
   @media only screen and (max-width: 768px) {
     .about-content {
       width: 100%;
-      padding: 15%;
+      padding-left: 15%;
+      padding-right: 15%;
       background: #191919; } }
+  @media only screen and (max-width: 480px) {
+    .about-content {
+      padding-left: 5%;
+      padding-right: 5%; } }
   .about-content__title {
     z-index: 10; }
   .about-content__description {
@@ -768,13 +774,41 @@ nav {
     color: #D9D9D9; }
 
 .slider {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-top: 90px; }
 
-.slick-prev {
-  left: -50px; }
+.myslick-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #303030;
+  border-radius: 100%;
+  position: relative;
+  left: -50px;
+  cursor: pointer; }
+  @media only screen and (max-width: 480px) {
+    .myslick-prev {
+      left: -15px; } }
 
-.slick-next {
-  right: -50px; }
+.myslick-next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid #303030;
+  border-radius: 100%;
+  position: relative;
+  right: -50px;
+  cursor: pointer; }
+  @media only screen and (max-width: 480px) {
+    .myslick-next {
+      right: -15px; } }
+  .myslick-next svg {
+    transform: rotate(180deg); }
 
 .s-steps {
   padding-top: 90px;
@@ -991,7 +1025,7 @@ nav {
   padding: 30px;
   padding-top: 60px;
   grid-row: 1/4;
-  background: url("../../img/breakfast.jpg") no-repeat;
+  background: url("img/breakfast.jpg") no-repeat;
   background-size: cover;
   border-radius: 10px;
   text-align: center;
