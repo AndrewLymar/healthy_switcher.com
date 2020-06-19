@@ -615,7 +615,7 @@ nav {
     @media only screen and (max-width: 768px) {
       .menu a {
         font-size: 22px; } }
-    .menu a.active {
+    .menu a.active, .menu a:hover {
       color: #34C759; }
   .menu__icon {
     display: none; }
@@ -691,6 +691,10 @@ nav {
     font-weight: 700;
     line-height: 18px;
     letter-spacing: 0.2em; }
+    .banner__button:hover {
+      border: 2px solid transparent;
+      background: #191919;
+      color: #fff; }
   .banner__contacts {
     margin-top: 70px; }
 

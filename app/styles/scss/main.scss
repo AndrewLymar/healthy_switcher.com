@@ -111,7 +111,8 @@ nav {
             font-size: 22px;
         }
 
-        &.active {
+        &.active,
+        &:hover {
             color: #34C759;
         }
     }
@@ -214,8 +215,15 @@ nav {
         font-weight: 700;
         line-height: 18px;
         letter-spacing: 0.2em;
+        
+    &:hover {
+        border: 2px solid transparent;
+        background: #191919;
+        color: #fff;
     }
 
+    }
+    
     &__contacts {
         margin-top: 70px;
     }

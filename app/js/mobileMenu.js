@@ -86,7 +86,6 @@
 				if (refElement.position().top <= scrollPos + offset && refElement.position().top + refElement.height() > scrollPos) {
 					$menuLinks.removeClass("active");
 					currLink.addClass("active");
-                    console.log(currLink);
 				}
 			});
 		}

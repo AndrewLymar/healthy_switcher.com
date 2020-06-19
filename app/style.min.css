@@ -1732,7 +1732,8 @@ nav {
   color: #fff;
 }
 
-.menu a.active {
+.menu a.active,
+.menu a:hover {
   color: #34c759;
 }
 
@@ -1853,6 +1854,12 @@ nav {
   font-weight: 700;
   line-height: 18px;
   letter-spacing: .2em;
+}
+
+.banner__button:hover {
+  border: 2px solid transparent;
+  background: #191919;
+  color: #fff;
 }
 
 .banner__contacts {
